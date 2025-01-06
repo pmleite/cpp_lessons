@@ -1,9 +1,3 @@
-/* Elabora um programa que apresente
- * a mensagem "Olá Mundo" no ecrã
- */
-
-
-
 
 
 

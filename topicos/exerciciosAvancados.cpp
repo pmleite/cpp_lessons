@@ -126,8 +126,7 @@ void graficoHorizontal(int x, int y, int z){
     cout << endl;
 }
 
-
 int main(){
-graficoHorizontal(200,100,500) ;
-  return 0;
+    graficoHorizontal(200,100,500) ;
+    return 0;
 }  
