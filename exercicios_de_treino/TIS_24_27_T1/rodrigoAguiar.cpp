@@ -28,10 +28,38 @@ if(produto == 01 || 1){
             cout << "Falta pagar" << 1 - dinheiro << " para concluir a sua compra." << endl;
             cin >> resto;
         } 
-            if(dinheiro)
+            if(dinheiro-1 == 0 || resto){
+            cout << "Obrigado pela sua compra, continuacoes de um bom dia"<< endl;
+
+            }
+           else if(produto == 02 || 2){
+    cout << "O seu produto custa 1€" << endl;
+    cout << "Porfavor insira o dinheiro" << endl;
+    cin >> dinheiro;
+        if(dinheiro - 1 != 0){
+            cout << "Falta pagar" << 1 - dinheiro << " para concluir a sua compra." << endl;
+            cin >> resto;
+        } 
+            if(dinheiro-1 == 0 || resto){
+            cout << "Obrigado pela sua compra, continuacoes de um bom dia"<< endl;
+
+            } 
+        if(produto == 03 || 3){
+    cout << "O seu produto custa 1€" << endl;
+    cout << "Porfavor insira o dinheiro" << endl;
+    cin >> dinheiro;
+        if(dinheiro - 1 != 0){
+            cout << "Falta pagar" << 1 - dinheiro << " para concluir a sua compra." << endl;
+            cin >> resto;
+        } 
+            if(dinheiro-1 == 0 || resto){
+            cout << "Obrigado pela sua compra, continuacoes de um bom dia"<< endl;
+
+            }
+}
 
 }
 
-
+}
     return 0;
 }
