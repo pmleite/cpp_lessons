@@ -1,32 +1,28 @@
 #include <iostream>
-
+int  xpto=10;
 using namespace std;
 
-int x = 5;
-
-void avaliaX(){
-    if(x == 10){
-        cout << "x é igual a 10" << endl;
-    }else{
-        cout << "x não é igual a 10" << endl;
-    }
-}
-
-int somaNumeros(){
-    int x = 5;
-    int b = 5;
-    return x+b;
-}
-
-int somaDoisNumeros(int x, int y){
+int soma(int x , int y){
     return x+y;
 }
 
-void somanumeros(int x, int y){
-    cout << x+y << endl;
+double soma(double x , int y){
+    return x+y;
 }
 
+double soma(double x , double y){
+    return x+y;
+}
+
+double megaFuncao(double x, double y, string msg){
+    cout << msg << endl;
+    return x+y;
+}
+
+
 int main(){
-    cout << somaDoisNumeros(10,20) << endl;
-    return 0;
+
+    cout << megaFuncao(10, 20, "Vou somar uns numeros") << endl;
+  
+return 0;
 }

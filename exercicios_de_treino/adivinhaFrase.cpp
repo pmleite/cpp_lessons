@@ -2,30 +2,34 @@
 
 using  namespace std;
 
-
 struct letraDaFrase{
     char letra;
     bool adivinhada;
 };
 
+string getFrase(){
+    system("clear");
+    string frase;
+    cout << "digite a frase a adivinhar " << "\n";
+    getline(cin, frase);
+    system("clear");
+    return frase;
+}
+
+
+
+
+
+
+
 bool terminou = false;
 
 int main(){
 
-    //limpa ecra
-    system("clear");
+    string frase = getFrase();
+    letraDaFrase letras[frase.size()]; //end memoria
 
-    //insere frase a adivinhar
-    string frase;
-    cout << "digite a frase a adivinhar " << "\n";
-    // obtem a frase com get line para poder ter espaços
-    getline(cin, frase);
-     
-    //limpa ecra
-    system("clear");
 
-    //cria vetor de letras
-    letraDaFrase letras[frase.size()];
 
     //inicializa vetor de letras
     for(int i = 0; i < frase.size(); i++){
