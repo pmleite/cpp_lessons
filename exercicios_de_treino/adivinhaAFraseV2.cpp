@@ -34,7 +34,7 @@ string getFrase(){
  * @brief Função que aceita a frase e coloca-a num vetor de letrasDaFrase
  *        todas com a flag de controlo a false
  */
-void inicializaFraseParaVetor(string frase, letrasDaFrase vetor[]){
+void inicializaFraseParaVetor(string& frase, letrasDaFrase vetor[]){
     for(int i = 0; i < frase.size(); i++){
         vetor[i].letra = frase[i];
         vetor[i].descoberta = false;
@@ -104,13 +104,19 @@ void pedeLetra(letrasDaFrase vetor[], string frase, int tamanho){
 
 
 int main(){
+   
     introScreen();
     string frase = getFrase();
     letrasDaFrase vetor[frase.size()];
+
+    struct letrasDaFrase* ptr = &vetor;
+   
     inicializaFraseParaVetor(frase, vetor);
+   
     atualizaEcra(vetor, frase.size());
     while(!adivinhou){
         pedeLetra(vetor, frase, frase.size());
     }
+   
     return 0;
 }
