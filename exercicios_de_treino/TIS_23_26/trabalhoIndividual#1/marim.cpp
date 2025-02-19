@@ -1,0 +1,2 @@
+#include <iostream>
+using namespace std;double mililitros, litros;int main(){system ("clear");cout << "Digite a quantidade em litros: ";cin >> litros;cout << "A quantidade de litros em mililitros é: " << litros* 1000;return 0;}

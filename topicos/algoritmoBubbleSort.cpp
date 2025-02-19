@@ -2,36 +2,37 @@
 
 using namespace std;
 
-int myArr[] = {5, 2, 4, 6, 1, 3, 8, 7, 9, 0, 10,
-               15, 12, 14, 16, 11, 13, 18, 17, 19, 20,
-               25, 22, 24, 26, 21, 23, 28, 27, 29, 30}; 
+int myArr[] = {5, 2, 4, 6, 1, 3, 8, 7, 9, 0, 10}; 
 
-void bubbleSort(int arr[], int n){
-    for(int i=0; i<n-1; i++){
-        for(int j=0; j<n-i-1; j++){
-            if(arr[j] > arr[j+1]){
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
-        }
+int somaNumerosDoArray(int arr[], int& dim){
+    int soma = 0;
+    for(int i = 0; i < dim ; i++){
+        soma += arr[i];
     }
+    return soma;
 }
 
-void mostraArray(int arr[], int n, string msg){
-    cout << "Estou a  mostrar o array " << msg << "\n\n";
-    for(int i=0; i<n; i++){
-        cout << arr[i] << " ";
-    }
-    cout << "\n\n"; 
+int soma2numeros(int a, int b){
+    cout << "Soma de int" << endl;
+    return a + b;
+}
+
+double soma2numeros(double a, double b){
+    cout << "Soma de double" << endl;
+    return a + b;
+}
+
+double soma2numeros(int a, double b){
+    cout << "Soma de int e double" << endl;
+    return a + b;
 }
 
 int main(){
 
-    mostraArray(myArr, sizeof(myArr)/sizeof(myArr[0]), 
-                "antes de ordenar");
-    bubbleSort(myArr, sizeof(myArr)/sizeof(myArr[0]));
-    mostraArray(myArr, sizeof(myArr)/sizeof(myArr[0]), 
-                "depois de ordenar");
+    cout << soma2numeros(5, 3) << endl;
+    cout << soma2numeros(5.5, 3.5) << endl;
+    cout << soma2numeros(5, 3.5) << endl;
+   // int dim = sizeof(myArr)/sizeof(myArr[0]);
+   // cout << somaNumerosDoArray( myArr, dim) << endl;
     return 0;
 }
